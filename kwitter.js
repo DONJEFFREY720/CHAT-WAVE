@@ -47,6 +47,8 @@ function getData() { firebase.database().ref("/"+name_dat).on('value', function(
   console.log(message_data);
  // name = message_data['User'];
  // console.log(name)
+
+ check_pass = message_data
   
 //End code
 } });  }); }
@@ -58,7 +60,7 @@ secure()
 
 function secure(){
 
-if(pass_data==message_data){
+if(pass_data==check_pass ){
   addUser();
   }
 
